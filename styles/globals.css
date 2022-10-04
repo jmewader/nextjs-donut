@@ -3,7 +3,8 @@ body {
   padding: 0;
   margin: 0;
   color-scheme: dark;
-  background-image: url("/images/1619747601_5-phonoteka_org-p-nezhnii-fon-dlya-konditerskoi-5.jpg");
+  background-image: url(./img/background.jpg);
+  background-size: contain;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

@@ -6,6 +6,13 @@ const MainLayout = styled.div`
   margin: 0 auto;
 `;
 
-const UiMainLayout = Object.assign(MainLayout, {});
+const MainLayoutPage = styled.div`
+  color: #000;
+  background-color: #fff;
+`;
+
+const UiMainLayout = Object.assign(MainLayout, {
+  Page: MainLayoutPage,
+});
 
 export default UiMainLayout;

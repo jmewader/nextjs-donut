@@ -1,6 +1,5 @@
 /*COMPONENTS*/
 import Head from "next/head";
-import MainLayout from "../components/MainLayout";
 import Link from "next/link";
 
 export default function Home() {

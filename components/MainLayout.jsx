@@ -8,7 +8,7 @@ const MainLayout = ({ children }) => {
   return (
     <UiMainLayout>
       <Header />
-      {children}
+      <UiMainLayout.Page>{children}</UiMainLayout.Page>
       <Footer />
     </UiMainLayout>
   );
