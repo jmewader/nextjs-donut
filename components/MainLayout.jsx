@@ -7,9 +7,11 @@ import UiMainLayout from "./ui/main-layout";
 const MainLayout = ({ children }) => {
   return (
     <UiMainLayout>
-      <Header />
-      <UiMainLayout.Page>{children}</UiMainLayout.Page>
-      <Footer />
+      <UiMainLayout.Wrap>
+        <Header />
+        {children}
+        <Footer />
+      </UiMainLayout.Wrap>
     </UiMainLayout>
   );
 };

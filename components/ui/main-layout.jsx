@@ -6,13 +6,20 @@ const MainLayout = styled.div`
   margin: 0 auto;
 `;
 
-const MainLayoutPage = styled.div`
+const MainLayoutWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
   color: #000;
   background-color: #fff;
+  margin: 80px auto auto;
 `;
 
 const UiMainLayout = Object.assign(MainLayout, {
-  Page: MainLayoutPage,
+  Wrap: MainLayoutWrap,
 });
 
 export default UiMainLayout;
