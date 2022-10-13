@@ -46,11 +46,21 @@ nav {
 nav a {
   margin-left: 15px;
   color: #2e2e2e;
+  transition: 0.25s;
 }
+
+nav a:hover {
+  color: #f57ad8;
+}
+
 footer {
   display: block;
   text-align: center;
   padding: 20px 0;
+}
+
+.logo {
+  cursor: pointer;
 }
 .not-found {
   text-align: center;

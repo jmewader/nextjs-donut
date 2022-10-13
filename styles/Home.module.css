@@ -1,7 +1,7 @@
 .title {
   text-align: center;
   font-size: 46px;
-  margin: 0px 30px;
+  margin: 20px 0px 40px;
 }
 .text {
   text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .btn:active {
-  background-color: #F555D8;
+  background-color: #f555d8;
 }
 
 .mainImage {

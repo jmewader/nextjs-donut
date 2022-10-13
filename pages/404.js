@@ -23,9 +23,7 @@ const NotFound = () => {
       <h3>Извините, такой страницы не существует..</h3>
       <p>
         Переход на
-        <Link href="/">
-          <a> главную </a>
-        </Link>
+        <Link href="/"> главную </Link>
         <span>через {counter}</span>
       </p>
     </div>

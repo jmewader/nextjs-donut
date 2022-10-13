@@ -6,23 +6,17 @@ import { GiDonut } from "react-icons/gi";
 const Header = () => {
   return (
     <header>
-      <div>
-        <GiDonut />
-      </div>
+      <Link href="/">
+        <div className="logo">
+          <GiDonut />
+        </div>
+      </Link>
 
       <nav>
-        <Link href="/">
-          <a>Домой</a>
-        </Link>
-        <Link href="/about">
-          <a>О нас</a>
-        </Link>
-        <Link href="/reviews">
-          <a>Отзывы</a>
-        </Link>
-        <Link href="/donuts">
-          <a>Пончики</a>
-        </Link>
+        <Link href="/">Домой</Link>
+        <Link href="/about">О нас</Link>
+        <Link href="/reviews">Отзывы</Link>
+        <Link href="/donuts">Пончики</Link>
       </nav>
     </header>
   );
