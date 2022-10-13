@@ -1,19 +1,23 @@
 /*COMPONENTS*/
 import Head from "next/head";
 import Link from "next/link";
-import MainLayout from "../components/MainLayout";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <MainLayout>
+    <>
       <Head>
         <title>Donuts</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Главная</h1>
+      <h1 className={styles.title}>Главная</h1>
+
+      <p className={styles.text}>
+        Сладкая пышка, политая сладкой глазурью, - это про донатс, он же пончик.
+      </p>
       <Link href="/donuts">
-        <a>Все пончики</a>
+        <button className={styles.btn}>Все пончики</button>
       </Link>
-    </MainLayout>
+    </>
   );
 }

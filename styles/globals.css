@@ -1,30 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Balsamiq+Sans:wght@400;700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext&effect=fire-animation|neon|outline");
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  /* color-scheme: dark;
-   */
-   background-image: url(./img/background.jpg);
-  background-size: contain;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  height: 100%;
+  color: #2e2e2e;
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 400;
+  background-size: 200px;
+  background-color: #ffffff;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #ffffffd9 0%, #ffffffd9 100%),
+    url("./images/bg.svg");
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
+a {
+  color: #f57ad8;
+  text-decoration: none;
+}
+.content {
+  max-width: 960px;
+  margin: 80px auto;
+  box-shadow: rgba(0, 0, 0, 0.043) 0px 0px 5px 3px;
+  border: 5px solid white;
+  padding: 20px;
+  background: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header svg {
+  font-size: 50px;
+  color: #f57ad8;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+nav a {
+  margin-left: 15px;
+  color: #2e2e2e;
+}
+footer {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+}
+.not-found {
+  text-align: center;
+}
+.not-found a {
+  color: #f57ad8;
+  text-decoration: underline;
+}
+
+.reviews {
+  font-size: 14px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+}

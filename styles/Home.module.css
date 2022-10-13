@@ -1,0 +1,38 @@
+.title {
+  text-align: center;
+  font-size: 46px;
+  margin: 0px 30px;
+}
+.text {
+  text-align: center;
+}
+.btn {
+  display: block;
+  width: 150px;
+  padding: 8px 0;
+  margin: 20px auto 40px;
+  background-color: #f57ad8;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background-color: #f8aae6;
+}
+
+.btn:active {
+  background-color: #F555D8;
+}
+
+.mainImage {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
