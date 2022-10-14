@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-server": "json-server --watch db.json --port 6000",
+    "serve": "concurrently \"npm run dev\" \"npm run json-server\""
   },
   "dependencies": {
+    "concurrently": "^7.4.0",
+    "json-server": "^0.17.0",
     "next": "12.3.1",
     "node-sass": "^7.0.3",
     "react": "^16.14.0",

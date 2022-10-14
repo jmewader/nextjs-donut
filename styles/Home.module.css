@@ -8,7 +8,7 @@
 }
 .btn {
   display: block;
-  width: 150px;
+  min-width: 150px;
   padding: 8px 0;
   margin: 20px auto 40px;
   background-color: #f57ad8;

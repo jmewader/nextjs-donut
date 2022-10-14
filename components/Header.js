@@ -14,9 +14,9 @@ const Header = () => {
 
       <nav>
         <Link href="/">Домой</Link>
+        <Link href="/donuts">Пончики</Link>
         <Link href="/about">О нас</Link>
         <Link href="/reviews">Отзывы</Link>
-        <Link href="/donuts">Пончики</Link>
       </nav>
     </header>
   );
