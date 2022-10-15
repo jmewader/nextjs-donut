@@ -31,24 +31,28 @@ const Item = (props) => {
 
   return (
     <div className={styles.item}>
-      <div className={styles.image}>
-        <Image
-          src={`${image}`}
-          alt={`${name}`}
-          width="100%"
-          height="100%"
-          layout="responsive"
-          objectFit="cover"
-        />
+      <div className={styles.info}>
+        <div className={styles.image}>
+          <Image
+            src={`${image}`}
+            alt={`${name}`}
+            width="100%"
+            height="100%"
+            layout="responsive"
+            objectFit="cover"
+          />
+        </div>
+
+        <h3 className={styles.title}>{name}</h3>
+
+        <p className={styles.text}>{description}</p>
       </div>
-
-      <h3 className={styles.title}>{name}</h3>
-
-      <p className={styles.text}>{description}</p>
-      <div className={styles.price}>{price}₽</div>
-      <Link href={`/donuts/${id}`}>
-        <button className={styles.btn}> Подробнее</button>
-      </Link>
+      <div className={styles.wrap}>
+        <div className={styles.price}>{price}₽</div>
+        <Link href={`/donuts/${id}`}>
+          <button className={styles.btn}>Подробнее</button>
+        </Link>
+      </div>
     </div>
   );
 };

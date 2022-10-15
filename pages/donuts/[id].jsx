@@ -1,4 +1,4 @@
-import styles from "/styles/Donuts.module.css";
+import styles from "/styles/Detail.module.css";
 import Image from "next/image";
 
 export const getStaticPaths = async () => {
@@ -34,7 +34,7 @@ const Detail = ({ donut }) => {
 
   return (
     <div className={styles.item}>
-      <div className={styles.imageDetail}>
+      <div className={styles.image}>
         <Image
           src={`${image}`}
           alt={`${name}`}
@@ -44,9 +44,11 @@ const Detail = ({ donut }) => {
           objectFit="cover"
         />
       </div>
-      <h3 className={styles.title}>{name}</h3>
-      <p className={styles.text}>{description}</p>
-      <div className={styles.price}>{price}₽</div>
+      <div className={styles.wrap}>
+        <h3 className={styles.title}>{name}</h3>
+        <p className={styles.text}>{description}</p>
+        <div className={styles.price}>{price}₽</div>
+      </div>
     </div>
   );
 };

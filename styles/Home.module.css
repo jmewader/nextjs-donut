@@ -11,7 +11,7 @@
   min-width: 150px;
   padding: 8px 0;
   margin: 20px auto 40px;
-  background-color: #f57ad8;
+  background-color: var(--main-text-color);
   border-radius: 4px;
   color: #fff;
   text-align: center;
