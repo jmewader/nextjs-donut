@@ -2,7 +2,6 @@
   "name": "nextjs-donut",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://jmewader.github.io/nextjs-donut",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
