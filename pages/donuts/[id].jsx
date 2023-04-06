@@ -1,36 +1,35 @@
 import styles from "/styles/Detail.module.css";
 import Image from "next/image";
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:6000/items");
-  const data = await res.json();
+// export const getStaticPaths = async () => {
+//   const res = await fetch("http://localhost:6000/items");
+//   const data = await res.json();
 
-  const paths = data.map((item) => {
-    return {
-      params: { id: item.id },
-    };
-  });
+//   const paths = data.map((item) => {
+//     return {
+//       params: { id: item.id },
+//     };
+//   });
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async (context) => {
-  const id = context.params.id;
+// export const getStaticProps = async (context) => {
+//   const id = context.params.id;
 
-  const res = await fetch(`http://localhost:6000/items/${id}`);
-  const data = await res.json();
+//   const res = await fetch(`http://localhost:6000/items/${id}`);
+//   const data = await res.json();
 
-  return {
-    props: { donut: data },
-  };
-};
+//   return {
+//     props: { donut: data },
+//   };
+// };
 
 const Detail = ({ donut }) => {
   const { id, name, description, price, image } = donut;
-  console.log("donut", donut);
 
   return (
     <div className={styles.item}>
