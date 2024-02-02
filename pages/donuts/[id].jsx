@@ -1,9 +1,23 @@
 import styles from "/styles/Detail.module.css";
 import Image from "next/image";
 
-export const getServerSideProps = async (context) => {
+export const getStaticPaths = async () => {
+  const res = await fetch("http://localhost:5000/items");
+  const data = await res.json();
+
+  const paths = data.map((item) => ({
+    params: { id: item.id.toString() },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
   try {
-    const id = context.params.id;
+    const id = params.id;
     const res = await fetch(`http://localhost:5000/items/${id}`);
 
     if (!res.ok) {
@@ -25,6 +39,10 @@ export const getServerSideProps = async (context) => {
 };
 
 const Detail = ({ donut }) => {
+  if (!donut) {
+    return <div>Error fetching data</div>;
+  }
+
   const { name, description, price, image } = donut;
 
   return (
