@@ -1,23 +1,7 @@
 import styles from "/styles/Detail.module.css";
 import Image from "next/image";
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/items");
-  const data = await res.json();
-
-  const paths = data.map((item) => {
-    return {
-      params: { id: item.id.toString() },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getServerProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const id = context.params.id;
 
   const res = await fetch(`http://localhost:5000/items/${id}`);

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "/styles/Donuts.module.css";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("http://localhost:5000/items");
   const data = await res.json();
 
