@@ -1,23 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "/styles/Donuts.module.css";
+import { DONUTS_DATA } from "../../components/data/donuts";
 
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/items");
-  const data = await res.json();
-
-  return {
-    props: { donuts: data },
-  };
-};
-
-const Donuts = ({ donuts }) => {
+const Donuts = () => {
   return (
     <div>
       <h1>Наши пончики</h1>
 
       <div className={styles.list}>
-        {donuts.map((item) => {
+        {DONUTS_DATA.map((item) => {
           return (
             <div key={item.id} className={styles.item}>
               <div className={styles.info}>

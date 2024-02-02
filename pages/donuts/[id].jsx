@@ -1,44 +1,14 @@
 import styles from "/styles/Detail.module.css";
 import Image from "next/image";
+import { DONUTS_DATA } from "../../components/data/donuts";
+import { useRouter } from "next/router";
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/items");
-  const data = await res.json();
+const Detail = () => {
+  const router = useRouter();
+  const { id } = router.query;
 
-  const paths = data.map((item) => ({
-    params: { id: item.id.toString() },
-  }));
+  const donut = DONUTS_DATA.find((item) => item.id === id);
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async ({ params }) => {
-  try {
-    const id = params.id;
-    const res = await fetch(`http://localhost:5000/items/${id}`);
-
-    if (!res.ok) {
-      throw new Error(`Failed to fetch data: ${res.status}`);
-    }
-
-    const data = await res.json();
-
-    return {
-      props: { donut: data },
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error.message);
-
-    return {
-      props: { donut: null },
-    };
-  }
-};
-
-const Detail = ({ donut }) => {
   if (!donut) {
     return <div>Error fetching data</div>;
   }
@@ -48,7 +18,7 @@ const Detail = ({ donut }) => {
   return (
     <div className={styles.item}>
       <div className={styles.image}>
-        <Image src={`${image}`} alt={`${name}`} width="100%" height="100%" layout="responsive" objectFit="cover" />
+        <Image src={image} alt={name} width="100%" height="100%" layout="responsive" objectFit="cover" />
       </div>
       <div className={styles.wrap}>
         <h3 className={styles.title}>{name}</h3>
